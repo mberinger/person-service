@@ -13,6 +13,8 @@ import org.restlet.engine.converter.ConverterHelper;
 import org.restlet.ext.jackson.JacksonConverter;
 import org.restlet.routing.Router;
 
+import uk.co.mikebelringer.person.types.PersonWithDependencies;
+
 public class RestletServerApplication extends Application {
 
     public static void main(String[] args) throws Exception {
@@ -24,6 +26,9 @@ public class RestletServerApplication extends Application {
     }
 
     public RestletServerApplication() {
+        MediaType mediaType = new MediaType("application/vnd." + PersonWithDependencies.TYPE + "+json", "Media type or range of media types");
+        getMetadataService().addExtension(PersonWithDependencies.TYPE, mediaType);
+
         getMetadataService().setDefaultMediaType(MediaType.APPLICATION_ALL_JSON);
 
         replaceConverter(JacksonConverter.class, new ExtJacksonConverter());
