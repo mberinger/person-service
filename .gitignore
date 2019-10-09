@@ -15,3 +15,6 @@ buildNumber.properties
 .idea
 *.iml
 /dependency-reduced-pom.xml
+
+# NodeJs
+*/node/*

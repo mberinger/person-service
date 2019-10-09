@@ -11,7 +11,7 @@ import org.restlet.util.Series;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import uk.co.mikebelringer.person.types.Person;
-import uk.co.mikebelringer.person.types.PersonWithDependencies;
+import uk.co.mikebelringer.person.types.PersonWithTitle;
 
 public class PersonServiceClient {
 
@@ -25,8 +25,8 @@ public class PersonServiceClient {
         return getPerson(Person.class);
     }
 
-    public PersonWithDependencies getPersonWithDependencies() {
-        return getPerson(PersonWithDependencies.class, "application/vnd." + PersonWithDependencies.TYPE + "+json");
+    public PersonWithTitle getPersonWithTitle() {
+        return getPerson(PersonWithTitle.class, "application/vnd." + PersonWithTitle.TYPE + "+json");
     }
 
     private <T extends Person> T getPerson(Class<T> personClass) {

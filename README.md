@@ -8,7 +8,7 @@ The `person-service` exposes a single REST API:
 
 GET /person
 
-The `person-service` provides a 'client' for consuming services to use. In version `0.0.1-SNAPSHOT`, the `person-service` provides basic details about a person, in version `0.0.2-SNAPSHOT`, the `person-service` additionally provides details about a person's dependencies i.e. children/kids. 
+The `person-service` provides a 'client' for consuming services to use. In version `0.0.1-SNAPSHOT`, the `person-service` provides basic details about a person, in version `0.0.2-SNAPSHOT`, the `person-service` additionally provides details about a person's title i.e. Mr, Mrs and etc. 
 
 There are two consumer services, `address-service` and `contact-service` that are detailed below.
 
